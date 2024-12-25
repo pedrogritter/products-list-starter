@@ -5,8 +5,6 @@ import React from "react";
 const Products = async () => {
   const productsJson = await getProducts();
 
-  console.log(productsJson);
-
   return (
     <div>
       <div className="grid grid-cols-3 gap-4">

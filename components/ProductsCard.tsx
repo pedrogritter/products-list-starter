@@ -25,9 +25,9 @@ const ProductsCard = ({ id, name, price, thumbnail }: ProductsCardProps) => {
             />
           </div>
         </CardBody>
-        <CardFooter className="flex flex-col gap-2 p-4">
+        <CardFooter className="flex flex-col gap-2 p-4 h-24">
           <div className="flex justify-between items-center w-full">
-            <h3 className="font-semibold text-lg line-clamp-1">{name}</h3>
+            <h3 className="font-semibold text-lg">{name}</h3>
             <Chip
               size="sm"
               className="bg-gradient-to-r from-purple-600 to-purple-400 text-white"
@@ -37,7 +37,7 @@ const ProductsCard = ({ id, name, price, thumbnail }: ProductsCardProps) => {
           </div>
         </CardFooter>
       </Link>
-      <CardFooter className="pt-0 px-4 pb-4">
+      <CardFooter className="pt-2 px-4 pb-4 align-bottom">
         <AddCartButton id={id} />
       </CardFooter>
     </Card>

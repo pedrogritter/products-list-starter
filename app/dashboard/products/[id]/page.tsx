@@ -10,8 +10,6 @@ type Props = {
 async function ProductDetail({ params }: Props) {
   const product = await getProduct(parseInt(params.id));
 
-  console.log(product);
-
   return <ProductDetailClient product={product} />;
 }
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import NextUIProviders from "./NextUIProviders";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import { CartProvider } from "./CartContext";
 
 export const metadata: Metadata = {
   title: "Products List",
@@ -16,8 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Nav></Nav>
-        <NextUIProviders>{children}</NextUIProviders>
+        <NextUIProviders>
+          <CartProvider>
+            <Nav></Nav>
+            {children}
+          </CartProvider>
+        </NextUIProviders>
       </body>
     </html>
   );
