@@ -1,5 +1,7 @@
+import Loader from "@/components/Loader";
+
 const ProductsLoader = () => {
-  return "Loading Dashboard...";
+  return <Loader message="Loading Dashboard..." size="lg" />;
 };
 
 export default ProductsLoader;

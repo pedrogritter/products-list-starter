@@ -1,5 +1,7 @@
+import Loader from "@/components/Loader";
+
 const ProductListLoader = () => {
-  return "...loading";
+  return <Loader message="Loading products..." size="lg" />;
 };
 
 export default ProductListLoader;
