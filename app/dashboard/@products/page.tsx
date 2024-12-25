@@ -1,15 +1,22 @@
+import ProductsCard from "@/components/ProductsCard";
 import { getProducts } from "@/services/product";
 import React from "react";
 
 const Products = async () => {
   const productsJson = await getProducts();
+
   console.log(productsJson);
 
   return (
     <div>
-      <div className="flex flex-col gap-3 justify-center">
+      <div className="grid grid-cols-3 gap-4">
         {productsJson.products.map((product) => (
-          <p key={product.id}>{product.title}</p>
+          <ProductsCard
+            key={product.id}
+            name={product.title}
+            price={product.price}
+            thumbnail={product.thumbnail}
+          />
         ))}
       </div>
     </div>
