@@ -2,7 +2,7 @@ import ProductsCard from "@/components/ProductsCard";
 import { getProducts } from "@/services/product";
 import React from "react";
 
-const Products = async () => {
+const ProductsPage = async () => {
   const productsJson = await getProducts();
 
   console.log(productsJson);
@@ -24,4 +24,4 @@ const Products = async () => {
   );
 };
 
-export default Products;
+export default ProductsPage;

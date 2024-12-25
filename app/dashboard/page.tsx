@@ -1,4 +1,9 @@
-const Home = () => {
+import { getProducts } from "@/services/product";
+
+const ProductsList = async () => {
+  const productsJson = await getProducts();
+
+  console.log(productsJson);
   return (
     <div className="w-full flex h-full justify-center items-start">
       <div>
@@ -9,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ProductsList;

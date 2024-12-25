@@ -1,5 +1,5 @@
 "use client";
-import { Card } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import AddCartButton from "./AddCartButton";
@@ -13,15 +13,33 @@ interface ProductsCardProps {
 
 const ProductsCard = ({ id, name, price, thumbnail }: ProductsCardProps) => {
   return (
-    <Card className="p-1 items-center">
-      <Link href={`/dashboard/${id}`}>
-        <Image src={thumbnail} alt="alt" width={100} height={100} />
-        <div>
-          <p className="font-bold">{name}</p>
-          <p>{price}$</p>
-        </div>
+    <Card className="w-full max-w-[300px] hover:scale-105 transition-transform duration-200">
+      <Link href={`/dashboard/products/${id}`}>
+        <CardBody className="p-0">
+          <div className="relative w-full aspect-square">
+            <Image
+              src={thumbnail}
+              alt={name}
+              fill
+              className="object-cover rounded-t-lg"
+            />
+          </div>
+        </CardBody>
+        <CardFooter className="flex flex-col gap-2 p-4">
+          <div className="flex justify-between items-center w-full">
+            <h3 className="font-semibold text-lg line-clamp-1">{name}</h3>
+            <Chip
+              size="sm"
+              className="bg-gradient-to-r from-purple-600 to-purple-400 text-white"
+            >
+              ${price}
+            </Chip>
+          </div>
+        </CardFooter>
       </Link>
-      <AddCartButton id={id} />
+      <CardFooter className="pt-0 px-4 pb-4">
+        <AddCartButton id={id} />
+      </CardFooter>
     </Card>
   );
 };

@@ -8,3 +8,12 @@ export async function getProducts(): Promise<unknown[]> {
   }
   return res.json();
 }
+
+export async function getProduct(id: number): Promise<unknown[]> {
+  const res = await fetch(`https://dummyjson.com/products/${id}`);
+
+  if (!res.ok) {
+    throw new Error("Error fetching product");
+  }
+  return res.json();
+}
