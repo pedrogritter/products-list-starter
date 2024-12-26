@@ -9,14 +9,21 @@ const Nav = () => {
   return (
     <nav className="h-[65px] border-b border-default-50 flex justify-between items-center px-6 gap-4">
       <div className="flex flex-row gap-3 items-center justify-center">
-        <figure>
-          <Image src={Logo} alt="sword" width={100} height={60} />
-        </figure>
-        <div>
-          <Link href="/">Home</Link>
+        <Link href="/">
+          <figure>
+            <Image src={Logo} alt="sword" width={100} height={60} />
+          </figure>
+        </Link>
+        <div className="flex gap-5">
+          <Link href="/dashboard" className="font-bold text-sky-950">
+            Dashboard
+          </Link>
+          <Link href="/dashboard/products" className="font-bold text-sky-950">
+            Products
+          </Link>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/3">
         <Input size="sm" variant="faded" placeholder="search" />
       </div>
       <div className="">
