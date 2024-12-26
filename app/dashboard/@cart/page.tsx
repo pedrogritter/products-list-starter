@@ -6,6 +6,7 @@ import { cartService } from "@/services/cart";
 import { getProduct } from "@/services/product";
 import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/app/CartContext";
+import ConfirmationModal from "@/components/ConfirmationModal";
 
 interface CartProduct {
   id: number;
@@ -17,11 +18,10 @@ interface CartProduct {
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState<CartProduct[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const { refreshCart, cartVersion } = useCart(); // Add cartVersion here
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const loadCartItems = async () => {
-    setIsLoading(true);
     const cart = cartService.getCart();
     const items = await Promise.all(
       cart.map(async (item) => {
@@ -33,7 +33,6 @@ const Cart = () => {
       })
     );
     setCartItems(items);
-    setIsLoading(false);
   };
 
   // Update effect to depend on cartVersion
@@ -47,8 +46,7 @@ const Cart = () => {
   );
 
   const handleConfirmOrder = () => {
-    cartService.clearCart();
-    refreshCart();
+    setIsModalOpen(true);
   };
 
   if (cartItems.length === 0) {
@@ -96,6 +94,18 @@ const Cart = () => {
           Confirm Order
         </Button>
       </Card>
+
+      {/* Confirmation Modal */}
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        cartItems={cartItems.map((item) => ({
+          name: item.title,
+          quantity: item.quantity,
+          price: item.price,
+        }))}
+        totalAmount={totalAmount}
+      />
     </div>
   );
 };
