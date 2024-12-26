@@ -1,0 +1,51 @@
+Started off by analizing the boilerplate code, reading the requeriments and choosing the best dependencies to add
+
+Went with tailwind and nextui for simplicity and effective implementation without wasting too much time with design choice, given that the project will be evaluated by the skill to implement wireframes and not how well I can design compenents. Its a plus that you can always customize these boiler plate components when needed.
+
+Thinking about adding signin later with clerk, or a more simple cookie based session with turso sqlite db.
+
+Staring by implementing common layout compoenents like nav,etc
+
+Next step was to implement the dummy product API service with an async fetch and get some sort of data displaying on the product list section
+
+With the API service in place it the next obvious step was to get some mockup UI going to feed the data into and see analyze what was effectivelly coming through.
+
+Then worked on getting more definitive product UI setup, starting with the cards (dashboard, product list) and related grids. Ended up also adding a getProduct function to the service, this will allow me in the next step to store persistently only the product id and quantity and  request the other data fields directly from the api. With it implemented also a product page with all the relevant data returned by the api.
+
+Noticed I was writing duplicate code in the loading components, so addded a generic loader that could serve and adapt to every component.
+
+Next was a big step and the more challenging of the whole project, the cart and its logic, decided to go with a combination of localstorage to store the data and react context, for simplicity, to pass the data down to every component that needed it. This both displays the ability to work with localstorage and context, persist the card data  between sessions and is also in my opinion the most adequate for the requirements. Also if needed I can add the final order to a db and display the past orders in an activity page.
+
+So first step was to build a service to handle the operations to add and delete and modify data in local storage. Connected to this needed to add a context provider wrapper to expose this data to the components that needed it 
+
+With this done I could work on the cart UI. Added all that the requirements demanded and even added a few extra bits, like the cart icon in the navbar and the items counter bellowe the cart, to display the connectiveness of the context provider.
+
+
+After this the only thing missing related to cart is the confirmation modal. Went for a very simplistic look where a simple summary of the order is placed above the order. And with a state change trigger it to either show a sucess message or the cart data and form.
+Then used react-form-hook for basic validation of the fields and added the logic to submit the form and confirm the order. Once the confirmation modal is closed a call to the cart service clear and refreshes the cart
+
+With all the requirements completed and some still some free time decided to level up the projects with some small addiction that can display a few more skills regarding to frontend
+Extra bits:
+ - Added cache memoization for the API requests
+ - Started porting a simple auth service I had but because it was made with another version of react canary there was an deprecation issue with form action state hook. Maybe go for clerk later
+
+
+
+Caveats:
+- Dashboard in not mobile friendly
+
+Readme
+
+
+TODO:
+ - memoize requests -c
+ - Store orders in db + activity page
+ - Add signin
+ - Protect routes
+ - Welcome page -c
+ - Improve theme
+ - Improve fallbacks and defaults
+ - Improve nav - done
+ 
+- Error: Route "/dashboard/products/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+ 
