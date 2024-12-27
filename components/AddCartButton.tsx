@@ -24,8 +24,7 @@ const AddCartButton = ({ id }: { id: number }) => {
   return (
     <Button
       className="text-white w-full
-        bg-gradient-to-r from-purple-600 to-purple-400
-        hover:bg-gradient-to-l
+        bg-gradient-to-tr from-[#a8c0ff] to-[#3f2b96] hover:bg-gradient-to-bl
         transition-all duration-300"
       endContent={<ShoppingBasket size={24} color="white" />}
       onPress={handleAddToCart}
@@ -39,3 +38,4 @@ const AddCartButton = ({ id }: { id: number }) => {
 
 export default AddCartButton;
 // bg-gradient-to-r from-[#a8c0ff], to-[#3f2b96]
+//bg-gradient-to-r from-purple-600 to-purple-400
