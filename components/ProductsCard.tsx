@@ -21,6 +21,7 @@ const ProductsCard = ({ id, name, price, thumbnail }: ProductsCardProps) => {
               src={thumbnail}
               alt={name}
               fill
+              sizes="100%"
               className="object-cover rounded-t-lg"
             />
           </div>

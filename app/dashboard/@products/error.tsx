@@ -1,6 +1,6 @@
 "use client";
 const ProductsError = () => {
-  return <div>error</div>;
+  return <div>Error in Dashboard Products</div>;
 };
 
 export default ProductsError;

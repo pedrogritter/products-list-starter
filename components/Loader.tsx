@@ -23,7 +23,7 @@ const Loader = ({ message = "Loading...", size = "md" }: LoaderProps) => {
     <div className="w-full flex flex-col items-center justify-center min-h-[200px]">
       <div className={`flex items-center ${sizeClasses[size]}`}>
         <Spinner
-          size={spinnerSizes[size]}
+          size={spinnerSizes[size] as "sm" | "md" | "lg"}
           color="secondary"
           classNames={{
             wrapper: "w-auto",

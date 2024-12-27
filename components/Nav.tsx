@@ -11,7 +11,7 @@ const Nav = () => {
       <div className="flex flex-row gap-3 items-center justify-center">
         <Link href="/">
           <figure>
-            <Image src={Logo} alt="sword" width={100} height={60} />
+            <Image src={Logo} alt="sword" width={100} height={60} priority />
           </figure>
         </Link>
         <div className="flex gap-5">

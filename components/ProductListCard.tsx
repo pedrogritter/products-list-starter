@@ -34,6 +34,7 @@ const ProductListCard = ({
               src={thumbnail}
               alt={name}
               fill
+              sizes="100%"
               className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
             />
           </div>

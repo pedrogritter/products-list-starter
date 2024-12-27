@@ -21,7 +21,7 @@ export default function Home() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our dummy collection of products with a simple shopping
+            Discover a dummy collection of products with a simple shopping
             experience. Start exploring the catalog and you probably will not
             find what you are looking for.
           </p>
@@ -45,19 +45,20 @@ export default function Home() {
             <div className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-semibold text-lg mb-2">Easy Shopping</h3>
               <p className="text-gray-600">
-                Browse through our extensive catalog with an intuitive interface
+                Browse through a totally random catalog with an intuitive
+                interface
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-semibold text-lg mb-2">Secure Checkout</h3>
               <p className="text-gray-600">
-                Shop with confidence using our secure payment system
+                Shop with zero confidence using our non existent payment system
               </p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-semibold text-lg mb-2">Fast Delivery</h3>
               <p className="text-gray-600">
-                Get your products delivered quickly to your doorstep
+                Get your products delivered indefinetly to your doorstep
               </p>
             </div>
           </div>

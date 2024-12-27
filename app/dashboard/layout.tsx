@@ -1,7 +1,14 @@
 "use client";
+import { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 
-const Dashboard = ({ children, products, cart }) => {
+interface DashboardLayoutProps {
+  children: ReactNode;
+  products: ReactNode;
+  cart: ReactNode;
+}
+
+const Dashboard = ({ children, products, cart }: DashboardLayoutProps) => {
   const path = usePathname();
 
   return (

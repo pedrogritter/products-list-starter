@@ -47,6 +47,7 @@ function ProductDetailClient({ product }: Props) {
                 src={product.thumbnail}
                 alt={product.title}
                 fill
+                sizes="100%"
                 className="object-cover rounded-lg"
               />
             </div>

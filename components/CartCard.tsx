@@ -41,13 +41,14 @@ const CartCard = ({
             src={thumbnail}
             alt={name}
             fill
+            sizes="100%"
             className="object-cover rounded-lg"
           />
         </div>
 
         {/* Product Info */}
         <div className="flex-grow">
-          <Link href={`/dashboard/${id}`}>
+          <Link href={`/dashboard/products/${id}`}>
             <h3 className="font-semibold text-lg hover:text-purple-600 transition-colors">
               {name}
             </h3>
@@ -61,7 +62,7 @@ const CartCard = ({
             isIconOnly
             size="sm"
             variant="flat"
-            onClick={() => handleQuantityChange(-1)}
+            onPress={() => handleQuantityChange(-1)}
             disabled={quantity <= 1}
           >
             <Minus size={16} />
@@ -71,7 +72,7 @@ const CartCard = ({
             isIconOnly
             size="sm"
             variant="flat"
-            onClick={() => handleQuantityChange(1)}
+            onPress={() => handleQuantityChange(1)}
           >
             <Plus size={16} />
           </Button>
@@ -85,7 +86,7 @@ const CartCard = ({
             color="danger"
             variant="light"
             startContent={<Trash2 size={16} />}
-            onClick={handleRemove}
+            onPress={handleRemove}
           >
             Remove
           </Button>

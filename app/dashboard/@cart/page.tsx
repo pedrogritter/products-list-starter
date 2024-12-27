@@ -26,8 +26,12 @@ const Cart = () => {
     const items = await Promise.all(
       cart.map(async (item) => {
         const product = await getProduct(item.id);
+
         return {
-          ...product,
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          thumbnail: product.thumbnail,
           quantity: item.quantity,
         };
       })
@@ -89,7 +93,7 @@ const Cart = () => {
         <Button
           className="w-full bg-gradient-to-r from-purple-600 to-purple-400 text-white"
           size="lg"
-          onClick={handleConfirmOrder}
+          onPress={handleConfirmOrder}
         >
           Confirm Order
         </Button>

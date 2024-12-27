@@ -1,6 +1,6 @@
 "use client";
 const CartError = () => {
-  return <div>error</div>;
+  return <div>Error in Cart</div>;
 };
 
 export default CartError;
