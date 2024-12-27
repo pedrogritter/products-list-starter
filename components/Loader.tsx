@@ -1,6 +1,5 @@
 "use client";
 import { Spinner } from "@nextui-org/react";
-import { LoaderIcon } from "lucide-react";
 
 interface LoaderProps {
   message?: string;
@@ -20,12 +19,6 @@ const Loader = ({ message = "Loading...", size = "md" }: LoaderProps) => {
     lg: "lg",
   };
 
-  const iconSizes = {
-    sm: 16,
-    md: 24,
-    lg: 32,
-  };
-
   return (
     <div className="w-full flex flex-col items-center justify-center min-h-[200px]">
       <div className={`flex items-center ${sizeClasses[size]}`}>
@@ -36,10 +29,6 @@ const Loader = ({ message = "Loading...", size = "md" }: LoaderProps) => {
             wrapper: "w-auto",
           }}
         />
-        {/* <LoaderIcon
-          size={iconSizes[size]}
-          className="animate-pulse text-purple-500"
-        /> */}
       </div>
       <p className={`mt-2 text-gray-600 ${sizeClasses[size]}`}>{message}</p>
     </div>

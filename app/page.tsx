@@ -22,8 +22,8 @@ export default function Home() {
 
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Discover our dummy collection of products with a simple shopping
-            experience. Start exploring the catalog and you probably won't find
-            what you're looking for.
+            experience. Start exploring the catalog and you probably will not
+            find what you are looking for.
           </p>
 
           {/* CTA Button */}
