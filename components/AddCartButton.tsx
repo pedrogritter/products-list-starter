@@ -37,5 +37,3 @@ const AddCartButton = ({ id }: { id: number }) => {
 };
 
 export default AddCartButton;
-// bg-gradient-to-r from-[#a8c0ff], to-[#3f2b96]
-//bg-gradient-to-r from-purple-600 to-purple-400
