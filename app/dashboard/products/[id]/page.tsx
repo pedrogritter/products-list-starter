@@ -2,13 +2,13 @@ import ProductDetailClient from "@/components/ProjectDetailClient";
 import { getProduct } from "@/services/product";
 
 type Props = {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 };
 
 async function ProductDetail({ params }: Props) {
-  const product = await getProduct(parseInt(params.id));
+  const { id } = await params;
+
+  const product = await getProduct(parseInt(id));
 
   return <ProductDetailClient product={product} />;
 }
