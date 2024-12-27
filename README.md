@@ -1,5 +1,7 @@
 (# SwordStore - Modern E-commerce Application
 
+This project is hosted on Vercel [here](https://products-list-starter-446u4o8st-pedrogritters-projects.vercel.app/)
+
 [Development Journal: Implementation, Challenges, and Enhancements](https://walnut-stilton-e3e.notion.site/Development-Journal-Implementation-Challenges-and-Enhancements-1683ab84c50680abb422cf9864574560?pvs=73)
 
 ## Table of Contents
@@ -21,6 +23,7 @@
 - **Form Handling:** React Hook Form
 - **Icons:** Lucide React
 - **Storage:** Local Storage for cart persistence
+- **Advanced Techniques:** Next.js Parallel Routing, which allows rendering multiple components simultaneously for better responsiveness and dynamic loading.
 
 ---
 
@@ -138,8 +141,7 @@ nextstore/
 - [ ] Order history
 
 ### Technical Enhancements
-- [ ] Server-side cart persistence
-- [ ] Image optimization
+- [ ] Image optimization with lazy loading
 - [ ] Performance monitoring
 - [ ] Unit testing
 - [ ] E2E testing
@@ -150,7 +152,7 @@ nextstore/
 
 ### Component Organization
 - Modular component structure
-- Separation of concerns
+- Separation of concerns using parallel routing
 - Reusable UI components
 
 ### State Management

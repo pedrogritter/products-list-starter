@@ -16,7 +16,7 @@ const CartIcon = () => {
           className="absolute -top-2 -right-2"
         >
           {/* Empty children required by NextUI Badge */}
-          <p>fix</p>
+          <></>
         </Badge>
       )}
     </div>
