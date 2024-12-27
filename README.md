@@ -1,6 +1,6 @@
-# SwordStore - Modern E-commerce Application
+(# SwordStore - Modern E-commerce Application
 
-[https://walnut-stilton-e3e.notion.site/Development-Journal-Implementation-Challenges-and-Enhancements-1683ab84c50680abb422cf9864574560?pvs=73](Development Journal: Implementation, Challenges, and Enhancements)
+[Development Journal: Implementation, Challenges, and Enhancements](https://walnut-stilton-e3e.notion.site/Development-Journal-Implementation-Challenges-and-Enhancements-1683ab84c50680abb422cf9864574560?pvs=73)
 
 ## Table of Contents
 1. [Tech Stack](#tech-stack)
@@ -37,7 +37,6 @@
 - Animated interactions
 - Loading states
 - Form validation
-- Modal confirmations
 
 ### Shopping Cart
 - Add/remove items
@@ -97,7 +96,6 @@ nextstore/
 ## Development Process
 
 ### Phase 1: Project Setup and Core Components
-- Next.js 14 project initialization
 - NextUI integration
 - Basic routing structure
 - Component architecture planning
@@ -131,7 +129,6 @@ nextstore/
 
 ### Immediate Improvements
 - [ ] Add user authentication
-- [ ] Implement backend integration
 - [ ] Add product search functionality
 - [ ] Implement product filtering
 - [ ] Add product categories
@@ -139,10 +136,6 @@ nextstore/
 ### Future Features
 - [ ] User profiles
 - [ ] Order history
-- [ ] Wishlist functionality
-- [ ] Product reviews
-- [ ] Payment integration
-- [ ] Admin dashboard
 
 ### Technical Enhancements
 - [ ] Server-side cart persistence
@@ -171,9 +164,7 @@ nextstore/
 - User feedback
 
 ### Performance
-- Optimized re-renders
-- Lazy loading
-- Image optimization
+- Optimized re-renders with cache
 
 ### Code Quality
 - TypeScript implementation
